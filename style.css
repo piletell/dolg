@@ -1,0 +1,82 @@
+:root {
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --bg: #000000;
+  --fg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-align: center;
+  overflow: hidden;
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Текст зверху — маленький */
+.label {
+  font-size: clamp(0.75rem, 1.8vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.35em;
+}
+
+/* Велике число днів */
+.days-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15em;
+  line-height: 0.95;
+}
+
+.days {
+  font-size: clamp(4.5rem, 26vw, 16rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Напис "днів" після числа */
+.days-unit {
+  font-size: clamp(1.15rem, 3.6vw, 2.4rem);
+  font-weight: 400;
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+}
+
+/* Сума знизу — трохи менша */
+.amount {
+  font-size: clamp(1.1rem, 3.5vw, 2.1rem);
+  font-weight: 400;
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  margin-top: 0.35em;
+}
